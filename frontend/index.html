@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kriteria Penilaian SAW</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      background-color: #f5f7fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    table thead th {
+      background-color: #343a40;
+      color: #fff;
+    }
+    .ranking {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="logo.png" alt="Logo Universitas" style="height: 40px;">
+    <h1>UPGRIS</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#data">Data</a></li>
+      <li><a href="#perhitungan">Perhitungan</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="home" style="background-color: #fff;">
+    <div class="overlay">
+      <h2 style="margin-top: 15vh;">Selamat Datang di</h2>
+      <h1> Web Penerapan Metode Simple Additive Weighting Untuk Menentukan Siswa Kurang Berprestasi</h1>
+      <div class="kelompok">
+      <h3>Nama Kelompok:</h3>
+        <div>
+          <p>1. Rifqi Nur Abdillah (23670125)</p>
+          <p>2. Fauzun Dwi Saputra (23670082)</p>
+          <p>3. Anis Sufilah (23670088)</p>
+          <p>4. Ande Kresna (23670109)</p>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="tentang" style="background-color: #f9f9f9;">
+    <h2>Tentang</h2>
+    <p>Web ini dibuat sebagai bagian dari tugas mata kuliah Decision Support System (DSS). Tujuan dari pembuatan web ini adalah untuk membantu proses pencatatan dan pengelolaan data secara efektif dan efisien, sehingga memudahkan pengambilan keputusan berdasarkan informasi yang tersimpan.
+
+Dengan menggunakan web note ini, diharapkan pengguna dapat dengan mudah mencatat, menyimpan, dan mengakses data penting yang dibutuhkan dalam pengambilan keputusan yang tepat dan cepat.</p>
+  </section>
+
+  <!-- Data -->
+  <section id="data" class="data" style="background-color: #fff;">
+    <h2>Data</h2>
+    <img src="gambar data.png" alt="Foto Ilustrasi" class="gambar-penuh">
+  </section>
+
+  <!-- Perhitungan -->
+  <section id="perhitungan" class="perhitungan" style="background-color: #f9f9f9;">
+    <h2>Perhitungan SAW</h2>
+
+
+
+    <h3>Daftar Kriteria</h3>
+    <input type="text" id="namaKriteria" placeholder="Nama kriteria">
+    <button onclick="tambahKriteria()">Tambah</button>
+
+    <div class="tabel-container"></div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama Kriteria</th>
+            <th>Bobot</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tabelKriteria"></tbody>
+      </table>
+    </div>
+
+    <br>
+    <button onclick="simpanBobot()">Simpan & Validasi Bobot</button>
+    <div id="pesan"></div>
+
+    <hr>
+
+    <h3>Input Siswa</h3>
+    <input type="text" id="namaSiswa" placeholder="Nama siswa">
+    <button onclick="tambahSiswa()">Tambah Siswa</button>
+
+    <div id="tabelSiswaContainer" style="margin-top: 20px;"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
