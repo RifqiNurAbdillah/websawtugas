@@ -1,7 +1,7 @@
 let kriteria = [];
 let siswa = [];
 
-const BASE_URL = "http://209.23.12.119:8080";
+const BASE_URL = "https://databasessiswa.duckdns.org";
 
 
 async function muatKriteriaDariBackend() {
